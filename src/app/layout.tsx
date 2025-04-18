@@ -2,8 +2,12 @@ import type { Metadata } from "next";
 import { Noto_Sans_KR, Noto_Serif_KR } from "next/font/google";
 import "./globals.css";
 
-const notosanskr = Noto_Sans_KR({});
-const notoserifkr = Noto_Serif_KR({});
+const notosanskr = Noto_Sans_KR({
+  subsets: ["latin"],
+});
+const notoserifkr = Noto_Serif_KR({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "청첩장",
