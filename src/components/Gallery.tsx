@@ -19,11 +19,7 @@ const Gallery = ({ images }: GalleryProps) => {
   };
 
   return (
-    <section className="my-[60px] py-5 border-b border-[#f0f0f0]">
-      <h2 className="font-['Noto_Serif_KR'] text-[1.5rem] text-center mb-[30px] font-medium text-[#555]">
-        갤러리
-      </h2>
-
+    <section className="my-[60px] py-5">
       <div className="flex items-center justify-center mb-5">
         <svg
           onClick={prevImage}

@@ -7,7 +7,7 @@ interface WeddingInfoProps {
 
 const WeddingInfo = ({ date, time, venue, address }: WeddingInfoProps) => {
   return (
-    <section className="my-[60px] py-5 border-b border-[#f0f0f0]">
+    <section className="mt-[60px]">
       <h2 className="font-['Noto_Serif_KR'] text-[1.5rem] text-center mb-[30px] font-medium text-[#555]">
         결혼식 안내
       </h2>

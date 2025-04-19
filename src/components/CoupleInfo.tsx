@@ -16,7 +16,7 @@ const CoupleInfo = ({
   brideMother,
 }: CoupleInfoProps) => {
   return (
-    <section className="text-center my-[60px] py-5 border-b border-[#f0f0f0]">
+    <section className="text-center my-[60px] border-b border-[#f0f0f0]">
       <div className="flex flex-col gap-[30px]">
         <div className="p-[15px] bg-[#f9f9f9] rounded-lg">
           <p className="text-[1.1rem] text-[#444]">
