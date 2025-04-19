@@ -24,7 +24,7 @@ const Directions = ({
         ),
         level: 5,
       };
-      const map = new kakao.maps.Map(container, options);
+      new kakao.maps.Map(container, options);
     });
   }, []);
 
