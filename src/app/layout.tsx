@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: `${process.env.AWS_S3_URL}/1/images/main.jpg`,
+        url: `${process.env.AWS_S3_URL}/1/images/main.png`,
       },
     ],
   },
