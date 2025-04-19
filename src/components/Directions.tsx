@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect } from "react";
+
 interface DirectionsProps {
   address: string;
   transportation: string[];
@@ -5,6 +9,17 @@ interface DirectionsProps {
 }
 
 const Directions = ({ address, transportation, parking }: DirectionsProps) => {
+  useEffect(() => {
+    kakao.maps.load(() => {
+      const container = document.getElementById("map");
+      const options = {
+        center: new kakao.maps.LatLng(33.450701, 126.570667),
+        level: 3,
+      };
+      const map = new kakao.maps.Map(container, options);
+    });
+  }, []);
+
   return (
     <section className="my-[60px] py-5 border-b border-[#f0f0f0]">
       <h2 className="font-['Noto_Serif_KR'] text-[1.5rem] text-center mb-[30px] font-medium text-[#555]">
@@ -12,13 +27,8 @@ const Directions = ({ address, transportation, parking }: DirectionsProps) => {
       </h2>
 
       <div className="mb-[30px]">
-        <div className="mb-[15px]">
-          {/* 카카오맵이나 네이버 지도 API를 활용해 지도를 표시할 수 있습니다 */}
-          <img
-            src="/images/map.jpg"
-            alt="결혼식장 지도"
-            className="w-full h-auto rounded-lg shadow-md"
-          />
+        <div className="mb-[15px] w-full h-[300px]">
+          <div id="map" className="w-full h-full rounded-lg shadow-md" />
         </div>
 
         <div className="my-[15px] text-center">
