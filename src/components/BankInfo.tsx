@@ -48,12 +48,12 @@ const BankInfo = ({ bankInfo }: BankInfoProps) => {
               className={`py-2 px-[14px] text-[0.85rem] rounded transition-all duration-200
                 ${
                   copiedIndex === index
-                    ? "bg-[#34a853] text-white border border-[#34a853] hover:bg-[#2d9147]"
+                    ? "bg-[#ff69b4] text-white border border-[#ff69b4] hover:bg-[#ff1493]"
                     : "bg-[#f5f5f5] text-[#555] border border-[#ddd] hover:bg-[#eee]"
                 }`}
               onClick={() => copyToClipboard(account.account, index)}
             >
-              {copiedIndex === index ? "복사됨" : "복사하기"}
+              {copiedIndex === index ? "복사완료" : "복사하기"}
             </button>
           </div>
         ))}
