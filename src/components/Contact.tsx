@@ -47,7 +47,7 @@ const SmsIcon = () => {
 
 const Contact = ({ contact }: ContactProps) => {
   return (
-    <section className="py-5">
+    <section className="py-5 px-4">
       <h2 className="font-['Noto_Serif_KR'] text-[1.5rem] text-center mb-[30px] font-medium text-[#555]">
         연락처
       </h2>
