@@ -12,6 +12,8 @@ const Directions = ({ address, transportation, parking }: DirectionsProps) => {
   useEffect(() => {
     kakao.maps.load(() => {
       const container = document.getElementById("map");
+      if (!container) return;
+
       const options = {
         center: new kakao.maps.LatLng(33.450701, 126.570667),
         level: 3,
