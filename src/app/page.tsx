@@ -10,7 +10,8 @@ import WeddingInfo from "@/components/WeddingInfo";
 import { WeddingData } from "@/types/wedding";
 
 const weddingData: WeddingData = await fetch(
-  `${process.env.AWS_S3_URL}/1/data.json`
+  `${process.env.AWS_S3_URL}/1/data.json`,
+  { cache: "no-store" }
 ).then((res) => res.json());
 
 function Home() {
