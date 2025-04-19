@@ -45,7 +45,7 @@ const Directions = ({
             href={`	https://map.kakao.com/link/roadview/1799300953`}
             className="bg-[#f5f5f5] border border-[#ddd] rounded p-2 px-4 text-[0.9rem] cursor-pointer transition-all duration-200 hover:bg-[#eee]"
           >
-            지도 앱에서 보기
+            카카오맵에서 열기
           </a>
         </div>
       </div>

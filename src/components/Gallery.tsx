@@ -25,12 +25,23 @@ const Gallery = ({ images }: GalleryProps) => {
       </h2>
 
       <div className="flex items-center justify-center mb-5">
-        <button
+        <svg
           onClick={prevImage}
-          className="bg-[rgba(0,0,0,0.1)] text-white border-none rounded-full w-10 h-10 flex items-center justify-center text-[1.2rem] cursor-pointer transition-all hover:bg-[rgba(0,0,0,0.2)]"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          &lt;
-        </button>
+          <rect width="24" height="24" fill="white" />
+          <path
+            d="M15 20.5L6 12L15 3.5"
+            stroke="#2A2A2E"
+            stroke-width="1.5"
+            stroke-linecap="square"
+          />
+        </svg>
+
         <div className="w-full max-w-[400px] h-[300px] mx-[15px] overflow-hidden rounded-lg shadow-md">
           <img
             src={images[currentIndex]}
@@ -38,12 +49,22 @@ const Gallery = ({ images }: GalleryProps) => {
             className="w-full h-full object-cover transition-transform duration-300"
           />
         </div>
-        <button
+        <svg
           onClick={nextImage}
-          className="bg-[rgba(0,0,0,0.1)] text-white border-none rounded-full w-10 h-10 flex items-center justify-center text-[1.2rem] cursor-pointer transition-all hover:bg-[rgba(0,0,0,0.2)]"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          &gt;
-        </button>
+          <rect width="24" height="24" fill="white" />
+          <path
+            d="M9 20.5L18 12L9 3.5"
+            stroke="#2A2A2E"
+            stroke-width="1.5"
+            stroke-linecap="square"
+          />
+        </svg>
       </div>
 
       <div className="flex justify-center gap-[10px] mt-5">
