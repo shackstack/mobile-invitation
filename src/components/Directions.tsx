@@ -1,22 +1,28 @@
 "use client";
 
+import { WeddingData } from "@/types/wedding";
 import { useEffect } from "react";
 
-interface DirectionsProps {
-  address: string;
-  transportation: string[];
-  parking: string | null;
-}
-
-const Directions = ({ address, transportation, parking }: DirectionsProps) => {
+const Directions = ({
+  address,
+  transportation,
+  parking,
+  coordinates,
+}: Pick<
+  WeddingData["weddingInfo"],
+  "address" | "transportation" | "parking" | "coordinates"
+>) => {
   useEffect(() => {
     kakao.maps.load(() => {
       const container = document.getElementById("map");
       if (!container) return;
 
       const options = {
-        center: new kakao.maps.LatLng(33.450701, 126.570667),
-        level: 3,
+        center: new kakao.maps.LatLng(
+          coordinates.latitude,
+          coordinates.longitude
+        ),
+        level: 5,
       };
       const map = new kakao.maps.Map(container, options);
     });
@@ -35,9 +41,12 @@ const Directions = ({ address, transportation, parking }: DirectionsProps) => {
 
         <div className="my-[15px] text-center">
           <p className="mb-[10px] text-[0.95rem] text-[#555]">{address}</p>
-          <button className="bg-[#f5f5f5] border border-[#ddd] rounded p-2 px-4 text-[0.9rem] cursor-pointer transition-all duration-200 hover:bg-[#eee]">
+          <a
+            href={`	https://map.kakao.com/link/roadview/1799300953`}
+            className="bg-[#f5f5f5] border border-[#ddd] rounded p-2 px-4 text-[0.9rem] cursor-pointer transition-all duration-200 hover:bg-[#eee]"
+          >
             지도 앱에서 보기
-          </button>
+          </a>
         </div>
       </div>
 
