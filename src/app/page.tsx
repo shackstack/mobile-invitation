@@ -7,9 +7,10 @@ import Gallery from "@/components/Gallery";
 import Header from "@/components/Header";
 import Invitation from "@/components/Invitation";
 import WeddingInfo from "@/components/WeddingInfo";
+import { WeddingData } from "@/types/wedding";
 
-const weddingData = await fetch(
-  `${process.env.AWS_S3_URL}/1/%08weddingData.json`
+const weddingData: WeddingData = await fetch(
+  `${process.env.AWS_S3_URL}/1/data.json`
 ).then((res) => res.json());
 
 function Home() {
@@ -17,26 +18,10 @@ function Home() {
     <div className="max-w-[500px] mx-auto px-4 font-['Noto_Sans_KR'] text-[#333] bg-white">
       <Header />
       <Invitation mainImage={weddingData.images.main} />
-      <CoupleInfo
-        groomName={weddingData.groomName}
-        groomFather={weddingData.groomFather}
-        groomMother={weddingData.groomMother}
-        brideName={weddingData.brideName}
-        brideFather={weddingData.brideFather}
-        brideMother={weddingData.brideMother}
-      />
+      <CoupleInfo {...weddingData.coupleInfo} />
       <Gallery images={weddingData.images.gallery} />
-      <WeddingInfo
-        date={weddingData.date}
-        time={weddingData.time}
-        venue={weddingData.venue}
-        address={weddingData.address}
-      />
-      <Directions
-        address={weddingData.address}
-        transportation={weddingData.transportation}
-        parking={weddingData.parking}
-      />
+      <WeddingInfo {...weddingData.weddingInfo} />
+      <Directions {...weddingData.weddingInfo} />
       <Contact contact={weddingData.contact} />
       <BankInfo bankInfo={weddingData.bankInfo} />
       <Footer />
