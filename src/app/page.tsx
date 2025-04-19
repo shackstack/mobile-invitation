@@ -1,6 +1,5 @@
 import BankInfo from "@/components/BankInfo";
 import Contact from "@/components/Contact";
-import CoupleInfo from "@/components/CoupleInfo";
 import Directions from "@/components/Directions";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
