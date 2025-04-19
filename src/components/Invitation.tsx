@@ -9,7 +9,7 @@ const Invitation = ({ mainImage }: InvitationProps) => {
         <img
           src={mainImage}
           alt="신랑 신부 웨딩 사진"
-          className="w-full max-w-[400px] rounded-lg shadow-md"
+          className="w-full rounded-lg shadow-md object-cover"
         />
       </div>
       <div className="my-10">
