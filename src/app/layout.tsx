@@ -13,6 +13,13 @@ const notoserifkr = Noto_Serif_KR({
 export const metadata: Metadata = {
   title: "김광호, 김가영 결혼합니다",
   description: "7월 25일(토) 낮 12시, BW웨딩 3층/피에스타",
+  openGraph: {
+    images: [
+      {
+        url: `${process.env.AWS_S3_URL}/1/images/main.jpg`,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
