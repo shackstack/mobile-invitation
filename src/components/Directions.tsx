@@ -23,6 +23,7 @@ const Directions = ({
           coordinates.longitude
         ),
         level: 5,
+        draggable: false,
       };
       new kakao.maps.Map(container, options);
     });
