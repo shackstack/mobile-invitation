@@ -37,8 +37,8 @@ const Gallery = ({ images }: GalleryProps) => {
           <path
             d="M15 20.5L6 12L15 3.5"
             stroke="#2A2A2E"
-            stroke-width="1.5"
-            stroke-linecap="square"
+            strokeWidth="1.5"
+            strokeLinecap="square"
           />
         </svg>
 
@@ -61,8 +61,8 @@ const Gallery = ({ images }: GalleryProps) => {
           <path
             d="M9 20.5L18 12L9 3.5"
             stroke="#2A2A2E"
-            stroke-width="1.5"
-            stroke-linecap="square"
+            strokeWidth="1.5"
+            strokeLinecap="square"
           />
         </svg>
       </div>
